@@ -17,7 +17,7 @@ $mobile-s: 480px;
   }
 }
 
-@mixin table-above {
+@mixin tablet-above {
   @media (width > $tablet) {
     // все что передадим в mixin обернется в медиа запрос
     @content;
