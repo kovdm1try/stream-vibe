@@ -1,11 +1,11 @@
 export const metadata = {
-    title: 'Home',
+  title: "Home",
 } // Метаданные страницы
 
 export default function () {
-    return (
-        <>
-            <h1> Main Page </h1>
-        </>
-    )
+  return (
+    <>
+      <h1> Main Page </h1>
+    </>
+  )
 }

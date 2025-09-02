@@ -1,13 +1,13 @@
 // Подключение нормализации стилей
-import '@a1rth/css-normalize'
+import "@a1rth/css-normalize"
 
 // Подключение шрифтов
-import './fonts.scss'
+import "./fonts.scss"
 
 // Подключение переменных
-import './variables.scss'
+import "./variables.scss"
 
 // подключение утилитарных классов
-import './utils.scss'
+import "./utils.scss"
 
-import './globals.scss'
+import "./globals.scss"

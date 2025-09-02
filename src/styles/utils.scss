@@ -7,6 +7,7 @@
 
 .visially-hidden {
   @include visualy-hidden;
+
   // иногда visually-hidden будет вызываться опционгально, поэтому помимо миксина существует еще класс
 }
 

@@ -1,11 +1,11 @@
 export const metadata = {
-    title: 'Movies & Shows',
+  title: "Movies & Shows",
 } // Метаданные страницы
 
 export default function () {
-    return (
-        <>
-            <h1> Movies Page </h1>
-        </>
-    )
+  return (
+    <>
+      <h1> Movies Page </h1>
+    </>
+  )
 }
