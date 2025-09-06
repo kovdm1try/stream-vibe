@@ -27,10 +27,13 @@ export default (props) => {
     ]
 
     return (
-        <header className="header">
+        <header className="header" data-js-overlay-menu="">
             <div className="header__inner container">
                 <Logo loading={"eager"} className={"header__logo"}/>
-                <dialog className="header__overlay-menu-dialog">
+                <dialog
+                    className="header__overlay-menu-dialog"
+                    data-js-overlay-menu-dialog={""}
+                >
                     <nav className="header__menu">
                         <ul className="header__menu-list">
                             {menuItems.map(({label, href}, index) => (
@@ -68,6 +71,9 @@ export default (props) => {
                 </dialog>
                 <BurgerButton
                     className={"header__burger-button visible-table"}
+                    extraAttrs={{
+                        'data-js-overlay-burger-button': '',
+                    }}
                 />
             </div>
         </header>

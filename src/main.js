@@ -1,1 +1,3 @@
-// Создние образцов классов и т.д.
+import OverlayMenu from "@/modules/OverlayMenu"
+
+new OverlayMenu();

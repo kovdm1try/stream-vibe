@@ -36,14 +36,29 @@
     padding: var(--container-padding-x);
     background-color: var(--color-black-20);
     border: none;
+    transition-duration: var(--transition-duration);
+    transition-behavior: allow-discrete; // включаем анимацию диксретных свойств
 
 
     @include tablet-above {
       display: contents; // на ширине экрана больше 1024 пикселей в разметке dialog существовать не будет
     }
 
+    @mixin starting-styles {
+      opacity: 0;
+      translate: 50%;
+    }
+
     &[open] {
       display: flex;
+
+      @starting-style { // для анимации display
+        @include starting-styles; // ОБЯЗАТЕЛЬНО повторяем что что &:not([open])(Скрытый вид)
+      }
+    }
+
+    &:not([open]) {
+      @include starting-styles;
     }
   }
 
