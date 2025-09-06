@@ -1,5 +1,3 @@
 export default () => {
-    return (
-        <footer>Footer</footer>
-    )
+  return <footer>Footer</footer>
 }

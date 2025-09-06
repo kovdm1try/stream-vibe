@@ -1,0 +1,50 @@
+.button {
+  @include flex-center(true);
+
+  column-gap: 4px;
+  padding: fluid-to-laptop(18, 14) fluid-to-laptop(24, 20);
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-red-45);
+  border: none;
+  border-radius: var(--border-radius-s);
+  user-select: none;
+  cursor: pointer;
+
+  // Используем такой подход, т.к. не можем использовать css переменные в качестве входных данных для SASS функции
+  @include laptop {
+    border-radius: var(--border-radius-xs);
+  }
+
+  @include hover {
+    // Переопределяем цвет текста, т.к. в globals.scss указли цвет ссылки при наведении --color-red-45
+    color: var(--color-white);
+    background-color: var(--color-red-60);
+  }
+
+  &:active {
+    scale: 1.05;
+  }
+
+  &:disabled {
+    color: var(--color-gray-60);
+    background-color: var(--color-black-06);
+    pointer-events: none;
+  }
+
+  &:has(.button__icon:only-child) { // если иконка единственный дочерний элемент
+    padding: 0;
+  }
+
+  &--transparent {
+    background-color: transparent;
+
+    &:has(.button__icon:only-child) { // если иконка единственный дочерний элемент
+      @include square(44px);
+
+      .button__icon {
+        --icon-size: #{fluid-to-laptop(34, 24)};
+      }
+    }
+  }
+}

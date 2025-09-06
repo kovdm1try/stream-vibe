@@ -9,7 +9,7 @@ export default ({ env }) => {
       postcssPxToRem({
         propList: ["*"], // Добавляем обработку всех единиц измерения
         mediaQuery: true, // добавляем обработку медиа запросов
-      }),
+      })
     )
   }
 
