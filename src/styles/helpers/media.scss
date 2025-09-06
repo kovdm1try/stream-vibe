@@ -62,7 +62,7 @@ $mobile-s: 480px;
   }
 
   // отработает на мгновение только на тех устройствах, где hover не работает
-  @if $hasActiveEffectOnMobile {
+  @if ($hasActiveEffectOnMobile) {
     @media (any-hover: none) {
       @content;
     }
